@@ -59,12 +59,62 @@ Provides recommendation with confidence level, application strategy, positioning
 ## Future Enhancements
 
 Additional planned features include:
-- Automated testing suite
+
+### Quality Assurance & Testing Strategy
+
+**Expand Unit Test Coverage (Deterministic Components)**
+- **Eligibility Checker**: Comprehensive test suite for rule-based logic
+  - Work model filtering (onsite/hybrid/remote)
+  - Commute distance calculations and edge cases
+  - Clearance requirement validation
+  - Travel percentage thresholds
+  - Certification matching logic
+  - Relocation requirement checks
+- **Distance Calculator**: Geographic computation accuracy
+  - Address parsing and normalization
+  - Distance calculation verification
+  - Long commute exception handling
+- **Google Sheets/Drive Tools**: Integration reliability
+  - Connection handling and error recovery
+  - Data formatting and schema validation
+  - Batch operation correctness
+- **Parser Utils**: Data extraction and transformation
+  - Date parsing and normalization
+  - Text cleaning and sanitization
+  - Field extraction edge cases
+
+**DeepEval Integration (LLM Agent Evaluation)**
+- Top candidate framework for evaluating and testing large language models
+- **JD Parser Agent Testing**:
+  - Structured output validation (JSON schema adherence)
+  - Field extraction accuracy across diverse job postings
+  - Edge case handling (missing fields, ambiguous requirements)
+  - Consistency across similar job descriptions
+- **ATS Scorer Agent Testing**:
+  - Rubric adherence and scoring consistency
+  - Rationale quality and evidence citation
+  - Hallucination detection (claims not in resume/JD)
+  - Context relevance (using appropriate information)
+  - Answer relevance (addressing scoring criteria correctly)
+- **Regression Testing**:
+  - Prompt change impact assessment
+  - Model version upgrade validation
+  - Performance benchmarking and A/B testing
+- **Continuous Evaluation**:
+  - Automated test runs on prompt updates
+  - Quality metrics tracking over time
+  - Failure case identification and analysis
+
+**Why This Approach:**
+- **Unit tests** for deterministic, rule-based components → Fast, reliable, comprehensive coverage
+- **DeepEval** for LLM agents → Specialized metrics for quality, consistency, and hallucination detection
+- **Separation of concerns** → Right tool for each component type
+
+### Feature Expansion
 - Cover letter generation
 - Resume version management
-- Job board integrations
-- Application tracking and analytics
-- TBD
+- Job board integrations (LinkedIn, Indeed, etc.)
+- Application tracking and analytics dashboard
 
 ---
 

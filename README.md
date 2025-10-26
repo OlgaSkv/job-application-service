@@ -19,6 +19,15 @@ The system makes the entire job-search process — from reading descriptions to 
 
 ---
 
+**Dashboard Overview - Batch Processing & Results**
+
+<img src="docs/images/dashboard-1.png" width="600" alt="Dashboard Overview">
+
+**Job Analysis Details - ATS Scoring & Eligibility**
+
+<img src="docs/images/dashboard-2.png" width="600" alt="Job Analysis Details">
+
+---
 ## Quick Start
 
 ### Prerequisites
