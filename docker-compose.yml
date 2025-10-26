@@ -1,0 +1,49 @@
+# Job Application Service - Docker Setup
+# 
+# Quick Start:
+#   1. Build: docker-compose build
+#   2. Run:   docker-compose run --rm app python scripts/process_jobs.py --limit 5
+#   3. Dashboard: docker-compose run --rm -p 8501:8501 app streamlit run streamlit_app.py
+#
+# Prerequisites:
+#   - credentials.json (Google service account)
+#   - config.json (configuration file)
+#   - .env (OPENAI_API_KEY)
+#   - data/candidate_profile.json (your profile)
+#
+# Interactive shell: docker-compose run --rm app /bin/bash
+
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: job-tracker
+    volumes:
+      # Configuration files (read-only)
+      - ./credentials.json:/app/credentials.json:ro
+      - ./config.json:/app/config.json:ro
+      - ./.env:/app/.env:ro
+      
+      # Candidate profile (read-only)
+      - ./data/candidate_profile.json:/app/data/candidate_profile.json:ro
+      
+      # Output directory (read-write)
+      - ./reports:/app/reports
+      
+      # Source code (for live development)
+      - ./src:/app/src
+      - ./scripts:/app/scripts
+      - ./streamlit_app.py:/app/streamlit_app.py
+    
+    ports:
+      - "8501:8501"
+    
+    environment:
+      - PYTHONUNBUFFERED=1
+    
+    stdin_open: true
+    tty: true
+    
+    command: /bin/bash
+

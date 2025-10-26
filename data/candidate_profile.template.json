@@ -1,0 +1,20 @@
+{
+  "name": "YOUR_NAME_HERE",
+  "current_location": "Your City, State",
+  "target_locations": ["Remote", "City 1, State", "City 2, State"],
+  "work_authorization_status": "US Citizen / Green Card / H1B / etc.",
+  "requires_sponsorship": false,
+  "current_clearance": null,
+  "willing_to_obtain_clearance": false,
+  "willing_to_relocate": false,
+  "remote_only": true,
+  "hybrid_acceptable": false,
+  "onsite_acceptable": false,
+  "max_commute_miles": 0,
+  "acceptable_long_commute_cities": [],
+  "max_travel_percent": 0,
+  "salary_minimum": 0,
+  "salary_currency": "USD",
+  "certifications_current": [],
+  "certifications_willing": []
+}

@@ -1,0 +1,43 @@
+{
+  "title": "ats_score",
+  "description": "ATS scoring output for resume-to-job match.",
+  "type": "object",
+  "properties": {
+    "technical_capabilities_score": {"type": "integer", "minimum": 0, "maximum": 6},
+    "technical_capabilities_rationale": {"type": "string"},
+    "technology_stack_score": {"type": "integer", "minimum": 0, "maximum": 4},
+    "technology_stack_rationale": {"type": "string"},
+    "applied_experience_score": {"type": "integer", "minimum": 0, "maximum": 3},
+    "applied_experience_rationale": {"type": "string"},
+    "years_calculation": {"type": "string"},
+    "years_experience_score": {"type": "integer", "minimum": 0, "maximum": 4},
+    "years_experience_rationale": {"type": "string"},
+    "seniority_calculation": {"type": "string"},
+    "seniority_match_score": {"type": "integer", "minimum": 0, "maximum": 4},
+    "seniority_match_rationale": {"type": "string"},
+    "domain_score": {"type": "integer", "minimum": 0, "maximum": 3},
+    "domain_rationale": {"type": "string"},
+    "education_score": {"type": "integer", "minimum": 0, "maximum": 3},
+    "education_rationale": {"type": "string"},
+    "role_type_score": {"type": "integer", "minimum": 0, "maximum": 3},
+    "role_type_rationale": {"type": "string"},
+    "ats_total_score": {"type": "integer", "minimum": 0, "maximum": 30},
+    "ats_category": {"type": "string", "enum": ["✅ ATS Pass", "⚠️ ATS Borderline", "❌ ATS Reject"]},
+    "ats_summary": {"type": "string"},
+    "technical_gaps": {"type": "array", "items": {"type": "string"}},
+    "strengths": {"type": "array", "items": {"type": "string"}},
+    "skills_for_ats": {"type": "array", "items": {"type": "string"}}
+  },
+  "required": [
+    "technical_capabilities_score", "technical_capabilities_rationale",
+    "technology_stack_score", "technology_stack_rationale",
+    "applied_experience_score", "applied_experience_rationale",
+    "years_calculation", "years_experience_score", "years_experience_rationale",
+    "seniority_calculation", "seniority_match_score", "seniority_match_rationale",
+    "domain_score", "domain_rationale",
+    "education_score", "education_rationale",
+    "role_type_score", "role_type_rationale",
+    "ats_total_score", "ats_category", "ats_summary",
+    "technical_gaps", "strengths", "skills_for_ats"
+  ]
+}

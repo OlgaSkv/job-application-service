@@ -1,0 +1,28 @@
+# Environments
+.env
+.vscode/
+output/
+logs/
+downloads/
+inputs/
+__pycache__/
+*.pyc
+.ipynb_checkpoints
+credentials.json
+config.json
+
+# Personal candidate data (contains sensitive information)
+data/candidate_profile.json
+
+# Reports directory - ignore contents but keep folder structure
+/reports/*
+!/reports/README.md
+
+/archive/
+
+# Presentation visual generation scripts (local development only)
+scripts/generate_presentation_visuals.py
+scripts/generate_ui_and_closing_visuals.py
+
+# Demo script (personal presentation notes)
+DEMO_SCRIPT.md

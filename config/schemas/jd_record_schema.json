@@ -1,0 +1,29 @@
+{
+  "title": "jd_parser",
+  "description": "Normalized job description data for resume gap and skill analysis.",
+  "type": "object",
+  "properties": {
+    "company": { "type": "string" },
+    "role": { "type": "string" },
+    "role_type": { "type": "string" },
+    "industry_domain": { "type": "string" },
+    "location": { "type": "string" },
+    "compensation": { "type": "string" },
+    "job_descr_summary": { "type": "string" },
+    "job_descr_full": { "type": "string" },
+    "skills_required": { "type": "array", "items": { "type": "string" } },
+    "skills_preferred": { "type": "array", "items": { "type": "string" } },
+    "soft_skills": { "type": "array", "items": { "type": "string" }, "maxItems": 8 },
+    "seniority": { "type": "string", "enum": ["Entry", "Mid", "Senior", "Principal", ""] },
+    "employment_type": { "type": "string", "enum": ["FT", "PT", "Contract", "Internship", ""] },
+    "work_model": { "type": "string", "enum": ["Remote", "Hybrid", "Onsite", ""] },
+    "clearance_required": { "type": "string" },
+    "years_experience": { "type": "string" },
+    "domain_knowledge_required": { "type": "array", "items": { "type": "string" } },
+    "domain_knowledge_preferred": { "type": "array", "items": { "type": "string" } },
+    "education_required": { "type": "string", "enum": ["High School", "Associate", "Bachelor's", "Master's", "PhD", ""] },
+    "education_preferred": { "type": "string", "enum": ["High School", "Associate", "Bachelor's", "Master's", "PhD", ""] },
+    "education_specs": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": ["company", "role", "job_descr_summary", "job_descr_full"]
+}

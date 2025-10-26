@@ -1,0 +1,46 @@
+{
+  "CREDENTIALS_PATH": "credentials.json",
+  "RESUME_FILE_ID": "<YOUR_RESUME_FILE_ID>",
+  "STATEMENT_FILE_ID": "<YOUR_STATEMENT_FILE_ID>",
+  "PROFILE_FILE_PATH": "data/candidate_profile.json",
+  "JD_SAVED_URL": "<YOUR_JD_SAVED_URL>",
+  "JOB_TRACKER_URL": "<YOUR_JOB_TRACKER_URL>",
+  "OUTPUT_DIR": "reports",
+  "SUMMARY_FILENAME_FORMAT": "summary_{timestamp}.csv",
+  "MODEL_CONFIG": {
+    "jd_parser": {
+      "model_name": "gpt-4o",
+      "temperature": 0
+    },
+    "ats_scorer": {
+      "model_name": "gpt-4o",
+      "temperature": 0
+    },
+    "_comment": "Additional optional parameters: max_tokens, top_p, frequency_penalty, presence_penalty, timeout, max_retries"
+  },
+  "JOB_LIMIT": 100,
+  "JD_SAVED_COLUMNS": [
+    "job_uid", "date_saved", "job_url", "job_description", "parsed"
+  ],
+  "JOB_TRACKER_COLUMNS": [
+    "job_uid", "company", "role", "role_type", "industry_domain", "location", "compensation",
+    "job_url", "job_portal", "date_saved", "date_applied",
+    "skills_for_ats",
+    "job_descr_summary", "job_descr_full",
+    "skills_required", "skills_preferred", "soft_skills",
+    "seniority", "employment_type", "work_model", "clearance_required", "years_experience",
+    "domain_knowledge_required", "domain_knowledge_preferred",
+    "education_required", "education_preferred", "education_specs",
+    "ats_total_score", "ats_category",
+    "technical_capabilities_score", "technical_capabilities_rationale",
+    "technology_stack_score", "technology_stack_rationale",
+    "applied_experience_score", "applied_experience_rationale",
+    "years_calculation", "years_experience_score", "years_experience_rationale",
+    "seniority_calculation", "seniority_match_score", "seniority_match_rationale",
+    "domain_score", "domain_rationale",
+    "education_score", "education_rationale",
+    "role_type_score", "role_type_rationale",
+    "ats_summary", "strengths", "technical_gaps",
+    "application_status", "notes"
+  ]
+}
